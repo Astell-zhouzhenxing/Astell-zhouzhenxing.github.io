@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>情绪认知系统 - 交互式思维导图</title>
+    <script src="https://cdn.jsdelivr.net/npm/mind-elixir@1.5.6/dist/mind-elixir.js"></script>
+    <style>
+        #mindmap {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .custom-node {
+            background: #f5f7fa;
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .case-study { border-left: 4px solid #67C23A; }
+        .emotion-state { border-left: 4px solid #409EFF; }
+        .theory-node { border-left: 4px solid #E6A23C; }
+    </style>
+</head>
+<body>
+    <div id="mindmap"></div>
+
+<script>
+const mind = {
+    "nodeData": {
+        "topic": "情绪的本质与影响",
+        "id": "root",
+        "children": [
+            {
+                "topic": "核心理解：理性与感性的区别",
+                "className": "theory-node",
+                "children": [
+                    {
+                        "topic": "理性",
+                        "className": "emotion-state",
+                        "children": [
+                            {"topic": "被人类命名的概念", "className": "custom-node"},
+                            {"topic": "追求总体利益最大化", "className": "custom-node"},
+                            {"topic": "基于情绪稳定状态的思考", "className": "custom-node"}
+                        ]
+                    },
+                    {
+                        "topic": "感性",
+                        "className": "emotion-state",
+                        "children": [
+                            {"topic": "直接受情绪状态驱动", "className": "custom-node"},
+                            {"topic": "表现为非利益导向行为", "className": "custom-node"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "topic": "情绪判断机制",
+                "className": "theory-node",
+                "children": [
+                    {
+                        "topic": "平静状态（情绪零点）",
+                        "className": "emotion-state",
+                        "children": [
+                            {"topic": "思考稳定但犹豫", "className": "custom-node"},
+                            {"topic": "利益最大化决策模式", "className": "custom-node"},
+                            {
+                                "topic": "案例：清晨无倾向认知", 
+                                "className": "case-study",
+                                "link": "javascript:void(0)"
+                            }
+                        ]
+                    },
+                    {
+                        "topic": "正向情绪（情绪+）",
+                        "className": "emotion-state",
+                        "children": [
+                            {"topic": "思维偏激化", "className": "custom-node"},
+                            {"topic": "冲动决策（直接下单）", "className": "custom-node"},
+                            {
+                                "topic": "案例：上午'世界真好'判断", 
+                                "className": "case-study",
+                                "link": "javascript:void(0)"
+                            }
+                        ]
+                    },
+                    {
+                        "topic": "负向情绪（情绪-）",
+                        "className": "emotion-state",
+                        "children": [
+                            {"topic": "认知消极化", "className": "custom-node"},
+                            {"topic": "决策受阻状态", "className": "custom-node"},
+                            {
+                                "topic": "案例：下午分手认知扭曲", 
+                                "className": "case-study",
+                                "link": "javascript:void(0)"
+                            },
+                            {
+                                "topic": "案例：晚间论文危机", 
+                                "className": "case-study",
+                                "link": "javascript:void(0)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "topic": "核心结论",
+                "className": "theory-node",
+                "children": [
+                    {
+                        "topic": "全面认知条件",
+                        "children": [
+                            {"topic": "需情绪稳定状态", "className": "custom-node"},
+                            {"topic": "综合正负因素分析", "className": "custom-node"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+window.onload = function() {
+    const mindMap = new MindElixir({
+        el: '#mindmap',
+        direction: MindElixir.LEFT,
+        data: mind,
+        draggable: true,
+        contextMenu: true,
+        toolBar: true,
+        nodeMenu: true,
+        keypress: true,
+    })
+    mindMap.init()
+}
+</script>
+</body>
+</html>
