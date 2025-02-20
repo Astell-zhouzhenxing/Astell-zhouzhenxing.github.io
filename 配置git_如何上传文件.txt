@@ -9,3 +9,6 @@
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
                         
 原文链接：https://blog.csdn.net/qq_29493173/article/details/113094143
+
+Github配置ssh key的步骤（大白话+包含原理解释）  ：
+https://blog.csdn.net/weixin_42310154/article/details/118340458
