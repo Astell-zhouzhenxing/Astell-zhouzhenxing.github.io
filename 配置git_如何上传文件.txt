@@ -10,6 +10,7 @@
                         
 原文链接：https://blog.csdn.net/qq_29493173/article/details/113094143
 
+<<<<<<< HEAD
 
 推荐使用 git pull --rebase（保持提交线整洁）
 git pull --rebase origin master
@@ -22,3 +23,7 @@ git push origin master
 强制推送（谨慎使用！）
 如果确认远程的更改可以丢弃（会覆盖远程历史！），可强制推送：
 git push --force origin master
+=======
+Github配置ssh key的步骤（大白话+包含原理解释）  ：
+https://blog.csdn.net/weixin_42310154/article/details/118340458
+>>>>>>> 06301983d28abd2aaa31275beab17c1a33180888
