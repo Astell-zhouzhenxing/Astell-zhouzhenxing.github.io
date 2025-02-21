@@ -9,3 +9,16 @@
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
                         
 原文链接：https://blog.csdn.net/qq_29493173/article/details/113094143
+
+
+推荐使用 git pull --rebase（保持提交线整洁）
+git pull --rebase origin master
+# 解决冲突后继续 rebase
+git rebase --continue
+# 完成后推送
+git push origin master
+
+
+强制推送（谨慎使用！）
+如果确认远程的更改可以丢弃（会覆盖远程历史！），可强制推送：
+git push --force origin master
